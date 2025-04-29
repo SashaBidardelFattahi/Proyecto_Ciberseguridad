@@ -54,4 +54,4 @@ Los usuarios pueden registrarse e iniciar sesión utilizando el sistema de valid
 Para comenzar con este proyecto, simplemente clona este repositorio en tu máquina local:
 
 ```bash
-git clone https://github.com/tu_usuario/proyecto-ciberseguridad.git
+git clone https://github.com/SashaBidardelFattahi/Proyecto_Ciberseguridad.git
