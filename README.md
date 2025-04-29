@@ -49,9 +49,14 @@ Los usuarios pueden registrarse e iniciar sesión utilizando el sistema de valid
 - La sección de **noticias** se actualizará para obtener la información mediante una API externa (como la API de Mediastack).
 - Implementación de un sistema de gestión de usuarios, incluyendo la validación del rol (comprador o vendedor).
 
+## Captura de página de inicio
+
+![Página de inicio](Imagenes/Pagina%20de%20incio.png)
+
 ## Instalación
 
 Para comenzar con este proyecto, simplemente clona este repositorio en tu máquina local:
 
 ```bash
 git clone https://github.com/SashaBidardelFattahi/Proyecto_Ciberseguridad.git
+
