@@ -10,103 +10,115 @@
   
 </head>
 <body>
-    <!-- Navbar -->
-    <div id="navbar-placeholder"></div>
-    <!-- Titular h1 -->
-    <h1 class="text-center mt-4 fw-bold text-primary">Lista de Productos</h1>
-    <!-- Carrusel -->
+    <header>
+      <!-- Navbar -->
+      <div id="navbar-placeholder"></div>
+      <!-- Titular h1 -->
+      <h1 class="text-center mt-4 fw-bold text-primary">Lista de Productos</h1>
+      <!-- Carrusel -->
+   </header> 
     
-    
-    <div class="container mt-4">
+   <main>
+      <section class="container mt-4">
+          
+          <button class="btn btn-primary mb-3" onclick="mostrarFormulario()">Subir Producto</button><!-- función que añadiremos en el productos.js en la siguiente fase-->
+          
+          <div id="formularioProducto" class="d-none">
+              <div class="mb-3">
+                  <input type="text" id="nombre" class="form-control" placeholder="Nombre del producto">
+              </div>
+              <div class="mb-3">
+                  <input type="number" id="precio" class="form-control" placeholder="Precio">
+              </div>
+              <div class="mb-3">
+                  <input type="text" id="vendedor" class="form-control" placeholder="Nombre del vendedor">
+              </div>
+              <div class="mb-3">
+                  <input type="file" id="imagen" class="form-control">
+              </div>
+              <button class="btn btn-success" onclick="agregarProducto()">Añadir Producto</button><!-- función que añadiremos en el productos.js en la siguiente fase-->
+          </div>
+
+          <div id="productosContainer" class="row"></div>
+        </section>
+      <!-- Productos estáticos de prueba a la espera de futuras ampliaciones para haceral dinámica -->
+      <section class="container">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Tarjeta 1 -->
+            <article class="col">
+              <div class="card card-horizontal shadow-sm border-0 rounded-4 d-flex flex-row overflow-hidden">
+                <img src="Imagenes/Ciberseguridad.webp" alt="producto1">
+                <div class="card-body text-center flex-grow-1 d-flex flex-column justify-content-center">
+                  <h5 class="card-title fw-bold">Producto 1</h5>
+                  <p class="card-text fs-5 text-success mb-1">100€</p>
+                  <p class="card-text"><small class="text-muted"><strong>Vendedor:</strong> Vendedor 1</small></p>
+                  <section class="d-flex justify-content-center gap-1 mt-2 flex-wrap">
+                    <button class="btn btn-outline-warning btn-sm px-2" onclick="editarProducto()">
+                      <i class="bi bi-pencil-square me-1"></i> Editar
+                    </button>
+                    <button class="btn btn-outline-danger btn-sm px-2" onclick="confirmarEliminarProducto()">
+                      <i class="bi bi-trash me-1"></i> Eliminar
+                    </button>
+                    <button class="btn btn-outline-success btn-sm px-2" onclick="confirmarCompraProducto()">
+                      <i class="bi bi-cart me-1"></i> Comprar
+                    </button>
+                  </section>
+                </div>
+              </div>
+            </article>
         
-        <button class="btn btn-primary mb-3" onclick="mostrarFormulario()">Subir Producto</button><!-- función que añadiremos en el productos.js en la siguiente fase-->
+            <!-- Tarjeta 2 -->
+            <article class="col">
+              <div class="card card-horizontal shadow-sm border-0 rounded-4 d-flex flex-row overflow-hidden">
+                <img src="Imagenes/Ciberseguridad.webp" alt="producto2">
+                <div class="card-body text-center flex-grow-1 d-flex flex-column justify-content-center">
+                  <h5 class="card-title fw-bold">Producto 2</h5>
+                  <p class="card-text fs-5 text-success mb-1">120€</p>
+                  <p class="card-text"><small class="text-muted"><strong>Vendedor:</strong> Vendedor 2</small></p>
+                  <section class="d-flex justify-content-center gap-1 mt-2 flex-wrap">
+                    <button class="btn btn-outline-warning btn-sm px-2" onclick="editarProducto()">
+                      <i class="bi bi-pencil-square me-1"></i> Editar
+                    </button>
+                    <button class="btn btn-outline-danger btn-sm px-2" onclick="confirmarEliminarProducto()">
+                      <i class="bi bi-trash me-1"></i> Eliminar
+                    </button>
+                    <button class="btn btn-outline-success btn-sm px-2" onclick="confirmarCompraProducto()">
+                      <i class="bi bi-cart me-1"></i> Comprar
+                    </button>
+                  </section>
+                </div>
+              </div>
+            </article>
         
-        <div id="formularioProducto" class="d-none">
-            <div class="mb-3">
-                <input type="text" id="nombre" class="form-control" placeholder="Nombre del producto">
-            </div>
-            <div class="mb-3">
-                <input type="number" id="precio" class="form-control" placeholder="Precio">
-            </div>
-            <div class="mb-3">
-                <input type="text" id="vendedor" class="form-control" placeholder="Nombre del vendedor">
-            </div>
-            <div class="mb-3">
-                <input type="file" id="imagen" class="form-control">
-            </div>
-            <button class="btn btn-success" onclick="agregarProducto()">Añadir Producto</button><!-- función que añadiremos en el productos.js en la siguiente fase-->
-        </div>
-
-        <div id="productosContainer" class="row"></div>
-    </div>
-    <!-- Productos estáticos de prueba a la espera de futuras ampliaciones para haceral dinámica -->
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <!-- Tarjeta 1 -->
-          <div class="col">
-            <div class="card card-horizontal shadow-sm border-0 rounded-4 d-flex flex-row overflow-hidden">
-              <img src="Imagenes/Ciberseguridad.webp" alt="producto1">
-              <div class="card-body text-center flex-grow-1 d-flex flex-column justify-content-center">
-                <h5 class="card-title fw-bold">Producto 1</h5>
-                <p class="card-text fs-5 text-success mb-1">100€</p>
-                <p class="card-text"><small class="text-muted"><strong>Vendedor:</strong> Vendedor 1</small></p>
-                <div class="d-flex justify-content-center gap-2 mt-2">
-                  <button class="btn btn-outline-warning px-3" onclick="editarProducto()">
-                    <i class="bi bi-pencil-square me-1"></i> Editar
-                  </button>
-                  <button class="btn btn-outline-danger px-3" onclick="confirmarEliminarProducto()">
-                    <i class="bi bi-trash me-1"></i> Eliminar
-                  </button>
+            <!-- Tarjeta 3 -->
+            <article class="col">
+              <div class="card card-horizontal shadow-sm border-0 rounded-4 d-flex flex-row overflow-hidden">
+                <img src="Imagenes/Ciberseguridad.webp" alt="producto3">
+                <div class="card-body text-center flex-grow-1 d-flex flex-column justify-content-center">
+                  <h5 class="card-title fw-bold">Producto 3</h5>
+                  <p class="card-text fs-5 text-success mb-1">90€</p>
+                  <p class="card-text"><small class="text-muted"><strong>Vendedor:</strong> Vendedor 3</small></p>
+                  <section class="d-flex justify-content-center gap-1 mt-2 flex-wrap">
+                    <button class="btn btn-outline-warning btn-sm px-2" onclick="editarProducto()">
+                      <i class="bi bi-pencil-square me-1"></i> Editar
+                    </button>
+                    <button class="btn btn-outline-danger btn-sm px-2" onclick="confirmarEliminarProducto()">
+                      <i class="bi bi-trash me-1"></i> Eliminar
+                    </button>
+                    <button class="btn btn-outline-success btn-sm px-2" onclick="confirmarCompraProducto()">
+                      <i class="bi bi-cart me-1"></i> Comprar
+                    </button>
+                  </section>
+                  
                 </div>
               </div>
-            </div>
+            </article>
           </div>
-      
-          <!-- Tarjeta 2 -->
-          <div class="col">
-            <div class="card card-horizontal shadow-sm border-0 rounded-4 d-flex flex-row overflow-hidden">
-              <img src="Imagenes/Ciberseguridad.webp" alt="producto2">
-              <div class="card-body text-center flex-grow-1 d-flex flex-column justify-content-center">
-                <h5 class="card-title fw-bold">Producto 2</h5>
-                <p class="card-text fs-5 text-success mb-1">120€</p>
-                <p class="card-text"><small class="text-muted"><strong>Vendedor:</strong> Vendedor 2</small></p>
-                <div class="d-flex justify-content-center gap-2 mt-2">
-                  <button class="btn btn-outline-warning px-3" onclick="editarProducto()">
-                    <i class="bi bi-pencil-square me-1"></i> Editar
-                  </button>
-                  <button class="btn btn-outline-danger px-3" onclick="confirmarEliminarProducto()">
-                    <i class="bi bi-trash me-1"></i> Eliminar
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Tarjeta 3 -->
-          <div class="col">
-            <div class="card card-horizontal shadow-sm border-0 rounded-4 d-flex flex-row overflow-hidden">
-              <img src="Imagenes/Ciberseguridad.webp" alt="producto3">
-              <div class="card-body text-center flex-grow-1 d-flex flex-column justify-content-center">
-                <h5 class="card-title fw-bold">Producto 3</h5>
-                <p class="card-text fs-5 text-success mb-1">90€</p>
-                <p class="card-text"><small class="text-muted"><strong>Vendedor:</strong> Vendedor 3</small></p>
-                <div class="d-flex justify-content-center gap-2 mt-2">
-                  <button class="btn btn-outline-warning px-3" onclick="editarProducto()">
-                    <i class="bi bi-pencil-square me-1"></i> Editar
-                  </button>
-                  <button class="btn btn-outline-danger px-3" onclick="confirmarEliminarProducto()">
-                    <i class="bi bi-trash me-1"></i> Eliminar
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
 
-
+    </main>
     <!-- Footer -->
-    <div id="footer-placeholder"></div>
+    <footer id="footer-placeholder"></footer>
     <!--<script src="JS/productos.js"></script>  Aquí ira el enlace al JS que permitirá crear dinámicamente productos -->
     <script src="JS/main.js"></script>
 </body>   
