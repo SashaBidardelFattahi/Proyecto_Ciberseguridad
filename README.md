@@ -55,7 +55,7 @@ Los usuarios pueden registrarse e iniciar sesión utilizando el sistema de valid
 
 ## Enlace Web
 
-[Visita mi web](https://sashitas.neocities.org)
+[Pincha aquí](https://sashitas.neocities.org)
 
 
 ## Instalación
